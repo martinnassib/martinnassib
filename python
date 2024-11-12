@@ -1,0 +1,65 @@
+name = "martin"
+age = 16
+print("my name is: %s and my age is: %d" % (name, age))
+print("=" * 20)
+
+a = 1
+s = 3
+d = 5
+print("hi {2},{0} {1}".format(a, s, d))
+print("=" * 20)
+
+y = "my name is martin , i am a programmer"
+print(y.upper())
+print("=" * 20)
+
+y = "my name is martin , i am a programmer"
+print(y.zfill(5))
+print("=" * 20)
+
+y = "my name is martin , i am a programmer"
+print(y.split())
+print("=" * 20)
+
+y = "my name is martin , i am a programmer 4r"
+print(y.title())
+print("=" * 20)
+
+y = "my name is martin , i am a programmer"
+print(y.splitlines())
+print("=" * 20)
+
+y = "my name is martin , i am a programmer"
+print(y.replace("name", "is"))
+print("=" * 20)
+
+text = "   python is a versatile language used in many fields.   "
+result = text.strip().upper().split()
+print(result)
+print("=" * 20)
+
+y = "     my name is martin , i am a programmer"
+print(y.strip())
+
+y = "my name is martin , i am a programmer"
+print(y.capitalize())
+
+print("hel \blo") ; print("mar\tin") ; print("nass\nib")
+
+a= {"i love python" , "i hate pyhon" , "j' adore python"}
+print(a.pop().split())
+
+x = 1
+y = 2
+x += y
+print(x)
+
+x = 1
+y = 2
+x -= y
+print(x)
+
+x = 1
+y = 2
+x *= y
+print(x)
