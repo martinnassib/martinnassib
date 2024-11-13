@@ -1,0 +1,186 @@
+import random
+import time
+
+# Define the paused_print function
+def paused_print(text, delay=1.0):
+    print(text)
+    time.sleep(delay)
+
+def round1(total_score):
+    dogs = [
+        "Boston Terrier", "Weimaraner", "German Shepherd", "Sloughi", "Borzoi"
+    ]
+    random_choice = random.choice(dogs)
+    print("Welcome to our adventure game!")
+    time.sleep(0.8)
+    print("You have a list of dogs, but you do not know what types of dogs they are.")
+    time.sleep(0.8)
+    paused_print(f"The randomly selected dog is: {random_choice}")
+    time.sleep(0.8)
+    total_score += 5
+    print(f"Your score is {total_score}")
+    time.sleep(0.8)
+    return total_score
+
+def round2(total_score):
+    time.sleep(0.4)
+    print("After the dog that will run in the race was chosen by randomness,")
+    time.sleep(0.4)
+    print("It is your turn to choose how you and your dog will go to the race.")
+    time.sleep(2)
+    print("1. Car")
+    print("2. Bicycle")
+    time.sleep(0.4)
+    choice = input("Choose 1 or 2: ")
+    Q_ = "Choose your action by typing the number corresponding to your choice: "
+    while choice not in ["1", "2"]:
+        choice = input(Q_)
+    if choice == "1":
+        print("Oh no! You chose the wrong choice!")
+        time.sleep(0.4)
+        print("Your car broke down.")
+        time.sleep(0.4)
+        print("You will not arrive at the race on time.")
+        time.sleep(1)
+        total_score += 2
+        print(f"Your score is {total_score}")
+    elif choice == "2":
+        print("Great! You will arrive early!")
+        total_score += 5
+        print(f"Your score is {total_score}")
+    return total_score
+
+def round3(total_score):
+    print("Now you are at the race site, you have some time to train your dog, and you have three choices:")
+    time.sleep(0.9)
+    print("1. Try training your dog yourself")
+    print("2. Pay a trainer to train your dog")
+    print("3. Not to train the dog")
+    time.sleep(0.9)
+    choice = input("Choose 1 or 2 or 3: ")
+    Q_ = "Choose your action by typing the number corresponding to your choice: "
+    while choice not in ["1", "2", "3"]:
+        choice = input(Q_)
+    if choice == "1":
+        print("Great job! You have some experience.")
+        total_score += 5
+        time.sleep(0.5)
+        print(f"Your score is {total_score}")
+    elif choice == "2":
+        print("You don't have enough money, but you will try to train him yourself, though time is running out.")
+        time.sleep(0.5)
+        total_score += 3
+        print(f"Your score is {total_score}")
+    else:
+        print("Your dog is not equipped to race.")
+        time.sleep(0.5)
+        total_score += 1
+        print(f"Your score is {total_score}")
+    return total_score
+
+def round4(total_score):
+    race = [
+        "Fifty meter race", "Hundred meter race", "Two hundred meters race"
+    ]
+    random_choice = random.choice(race)
+    print("Now it's time to find out how many meters your dog will run randomly.")
+    time.sleep(2)
+    paused_print(f"The randomly selected race is: {random_choice}")
+    
+    if random_choice == "Fifty meter race":
+        print("The short distance means you have a greater chance of winning!")
+        time.sleep(0.6)
+        total_score += 3
+        print(f"Your score is {total_score}")
+    elif random_choice == "Hundred meter race":
+        print("The distance is expected, and you have a chance to win.")
+        time.sleep(0.6)
+        total_score += 4
+        print(f"Your score is {total_score}")
+    else:
+        print("The distance is long, but your dog is trained for it.")
+        time.sleep(0.6)
+        total_score += 5
+        print(f"Your score is {total_score}")
+    
+    return total_score
+
+def round5(total_score):
+    paused_print("Now the race will begin!")
+    paused_print("The countdown will start now.")
+    for i in range(5, 0, -1):
+        print(i)
+        time.sleep(1)
+    paused_print("Starting whistle!")
+    total_score += 5
+    time.sleep(0.5)
+    print(f"Your score is {total_score}")
+    return total_score
+
+def round6(total_score):
+    time.sleep(1)
+    print("You have solutions to encourage your dog to run:")
+    time.sleep(1)
+    print("1. Call him by name several times")
+    print("2. Run next to him")
+    print("3. Throw his favorite toy in front of him so he can chase it until the end of the race")
+    print("4. Don't intervene from the beginning")
+    choice = input("Choose 1 or 2 or 3 or 4: ")
+    Q_ = "Choose your action by typing the number corresponding to your choice: "
+    while choice not in ["1", "2", "3", "4"]:
+        choice = input(Q_)
+    if choice == "1":
+        print("You will win!")
+        total_score += 5
+        time.sleep(0.5)
+        print(f"Your score is {total_score}")
+        time.sleep(1)
+        print("GAME ENDED")
+    elif choice == "2":
+        print("You will win!")
+        total_score += 5
+        time.sleep(0.5)
+        print(f"Your score is {total_score}")
+        time.sleep(1)
+        print("GAME ENDED")
+    elif choice == "3":
+        print("You will win!")
+        total_score += 5
+        time.sleep(0.5)
+        print(f"Your score is {total_score}")
+        time.sleep(1)
+        print("GAME ENDED")
+    else:
+        print("You will lose.")
+        print("Game Over!!")
+        total_score += 1
+        time.sleep(0.5)
+        print(f"Your score is {total_score}")
+        time.sleep(1)
+        print("GAME ENDED")
+    return total_score
+
+def play_again():
+    while True:
+        choice = input("Do you want to play again? (yes/no): ").lower()
+        if choice == "yes":
+            start_game()
+        elif choice == "no":
+            paused_print("Thank you for playing!")
+            break
+        else:
+            paused_print("Invalid input. Please enter 'yes' or 'no'.")
+
+def start_game():
+    total_score = 0
+    total_score = round1(total_score)
+    total_score = round2(total_score)
+    total_score = round3(total_score)
+    total_score = round4(total_score)
+    total_score = round5(total_score)
+    total_score = round6(total_score)
+    print(f"Your final score is {total_score}")
+    play_again()
+
+start_game()
+print("=" * 20)
