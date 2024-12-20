@@ -1,0 +1,16 @@
+Quantitive data :
+numeric values that allows maths operatins that we can be ask about it by (How much or How many)
+It has two kinds of Data or two data types :
+1- Continous Data : that can be split into smaller values (age: years: months: weeks:days:hours : minuits: seconds )
+2- Discrete Data : that cannot be split into smaller values (how many devises do you have ? 3) (You cannot say 3.5)
+
+Categorical Data:
+A group or a set of items that we can be ask about it by (What type or What kind)
+It has two kinds of Data or two data types:
+1- Ordinal Data : "ordered"(grades "exellent  ,very good ,good")
+2- Nominal Data: "Not ordered" (colors )
+
+Measures of center :
+MEAN
+MODE
+MEADIAN
